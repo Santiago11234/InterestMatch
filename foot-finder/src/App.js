@@ -27,7 +27,7 @@ function App() {
   };
 
   return (
-    <Router  basename="/InterestMatch">
+    <Router  basename="/">
       <ThemeProvider theme={theme}>
         <Routes>
           {isLoggedIn ? (
