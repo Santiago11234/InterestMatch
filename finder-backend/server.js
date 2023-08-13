@@ -21,7 +21,7 @@ const connection_url = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.D
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cors({
-    origin: ['http://localhost:3000', 'https://interest-match-front.vercel.app/'],
+    origin: ['http://localhost:3000', 'https://interest-match-front.vercel.app'],
     methods: ['GET', 'POST', 'DELETE'],
     credentials: true
   }));
