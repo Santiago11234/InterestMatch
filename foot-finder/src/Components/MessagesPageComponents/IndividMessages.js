@@ -28,7 +28,7 @@ export default function IndividMessages({ userId }) {
     async function fetchPairs() {
       try {
         const response = await axios.get(
-          `${process.env.REACT_APP_API_URL}/user/get-profile-picture-and-name/${userId}`
+          `${process.env.REACT_APP_API_URL}user/get-profile-picture-and-name/${userId}`
         );
         setUser(response.data);
       } catch (error) {
@@ -38,7 +38,7 @@ export default function IndividMessages({ userId }) {
     async function fetchConversation() {
       try {
         const response = await axios.get(
-          `${process.env.REACT_APP_API_URL}/user/get-messages/${userId}/${pairId}`
+          `${process.env.REACT_APP_API_URL}user/get-messages/${userId}/${pairId}`
         );
 
         const updatedConversation = response.data.messages.map((message) => ({
@@ -72,7 +72,7 @@ export default function IndividMessages({ userId }) {
     if (newMessage.trim() !== "") {
       const content = newMessage;
       axios
-        .post(`${process.env.REACT_APP_API_URL}/user/send-message/${userId}/${pairId}`, {
+        .post(`${process.env.REACT_APP_API_URL}user/send-message/${userId}/${pairId}`, {
           content,
           conversationId: fullCon.conversationId,
         })

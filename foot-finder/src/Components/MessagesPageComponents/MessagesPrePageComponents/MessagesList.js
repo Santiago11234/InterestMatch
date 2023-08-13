@@ -12,7 +12,7 @@ export default function MessagesList({ userId, pairSearchText }) {
     async function fetchPairs() {
       try {
         const response = await axios.get(
-          `${process.env.REACT_APP_API_URL}/user/get-pairs/${userId}`
+          `${process.env.REACT_APP_API_URL}user/get-pairs/${userId}`
         );
         setPairs(response.data);
         setFilteredPairs(response.data);

@@ -5,7 +5,6 @@ import Logo from '../Assets/Images/Logos/FoodFinderLogo.png';
 import { useNavigate } from 'react-router-dom';
 import ButtonRow from '../Components/ProfilePageComponents/ButtonRow';
 import styles from '../Components/ProfilePageComponents/ProfilePage.module.css';
-import Food from '../Components/ProfilePageComponents/Components/Food';
 import PersonalInfo from '../Components/ProfilePageComponents/Components/PersonalInfo';
 
 export default function ProfilePage( {userId} ) {

@@ -38,7 +38,7 @@ const PersonalInfo = ({ userId }) => {
       console.log(userId);
       try {
         const response = await axios.get(
-          `${process.env.REACT_APP_API_URL}/user/get-profile-picture-and-name/${userId}`
+          `${process.env.REACT_APP_API_URL}user/get-profile-picture-and-name/${userId}`
         );
         setEditedName(response.data.name);
         setEditedImgUrl(response.data.profilePicture);
@@ -64,7 +64,7 @@ const PersonalInfo = ({ userId }) => {
 
         console.log(editedImgUrl)
       const response = await axios.put(
-        `${process.env.REACT_APP_API_URL}/user/set-profile-picture-and-name/${userId}`,
+        `${process.env.REACT_APP_API_URL}user/set-profile-picture-and-name/${userId}`,
         {
           name: editedName,
           imgUrl: editedImgUrl,
@@ -100,7 +100,7 @@ const PersonalInfo = ({ userId }) => {
   
         try {
           await axios.put(
-            `${process.env.REACT_APP_API_URL}/user/set-profile-picture-and-name/${userId}`,
+            `${process.env.REACT_APP_API_URL}user/set-profile-picture-and-name/${userId}`,
             {
               name: editedName,
               imgUrl: imageUrl,

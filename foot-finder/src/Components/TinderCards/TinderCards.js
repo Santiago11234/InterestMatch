@@ -12,7 +12,7 @@ function TinderCards({ tinderCardRef, userId, index }) {
     async function fetchCandidates() {
       try {
         const response = await axios.get(
-          `${process.env.REACT_APP_API_URL}/user/get-candidates/${userId}`
+          `${process.env.REACT_APP_API_URL}user/get-candidates/${userId}`
         );
         setCandidates(response.data);
       } catch (error) {
@@ -35,7 +35,7 @@ function TinderCards({ tinderCardRef, userId, index }) {
     }
 
       const candidateId = candidates[currentCandidateIndex].userId;
-      axios.delete(`/user/delete-candidate/${candidateId}`, {
+      axios.delete(`${process.env.REACT_APP_API_URL}user/delete-candidate/${candidateId}`, {
           data: {
             isPair: isPair,
             candidateId: userId,

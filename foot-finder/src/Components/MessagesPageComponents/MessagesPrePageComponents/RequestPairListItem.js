@@ -8,7 +8,7 @@ export default function MessagesPairListItem({ userId, pair }) {
   const handleInterest = (isGood) => {
     const isPair = isGood;
     const candidateId = pair.userId;
-    axios.delete(`${process.env.REACT_APP_API_URL}/user/delete-request/${userId}`, {
+    axios.delete(`${process.env.REACT_APP_API_URL}user/delete-request/${userId}`, {
       data: {
         isPair: isPair,
         candidateId: candidateId,

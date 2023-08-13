@@ -45,7 +45,7 @@ export default function MessagesHeader({ clickedBack, changePage, userId, update
     async function fetchPairs() {
       try {
         const response = await axios.get(
-          `${process.env.REACT_APP_API_URL}/user/get-profile-picture-and-name/${userId}`
+          `${process.env.REACT_APP_API_URL}user/get-profile-picture-and-name/${userId}`
         );
         setUser(response.data);
       } catch (error) {

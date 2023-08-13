@@ -1,5 +1,4 @@
 import React from 'react';
-import { Button } from '@mui/material';
 import ProfileButton from './ProfileButton';
 import styles from './ProfilePage.module.css';
 import Food from './Components/Food';

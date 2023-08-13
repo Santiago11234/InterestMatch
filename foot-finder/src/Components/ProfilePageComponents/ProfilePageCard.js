@@ -36,7 +36,7 @@ const ProfilePageCard = ({ userId, index, color }) => {
       console.log(userId);
       try {
         const response = await axios.get(
-          `${process.env.REACT_APP_API_URL}/user/get-interests/${userId}`
+          `${process.env.REACT_APP_API_URL}user/get-interests/${userId}`
         );
         setInterests(response.data);
       } catch (error) {
@@ -59,7 +59,7 @@ const ProfilePageCard = ({ userId, index, color }) => {
     try {
       console.log(editedImgUrl)
       const response = await axios.put(
-        `${process.env.REACT_APP_API_URL}/user/set-interest/${userId}`,
+        `${process.env.REACT_APP_API_URL}user/set-interest/${userId}`,
         {
           index,
           title: editedTitle,
