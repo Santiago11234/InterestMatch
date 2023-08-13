@@ -31,8 +31,8 @@ export default function MessagesList({ userId }) {
           <RequestPairListItem key={index} pair={pair}  userId={userId}/>
         ))
       ) : (
-        <Modal open={true} className={styles.modalPage} disableEnforceFocus hideBackdrop>
-        <div className={styles.otherModalContent}>
+        <Modal open={true} className={styles.OtherModalPageContainer} disableEnforceFocus hideBackdrop>
+        <div className={styles.modalContent}>
           <h2>
             You have no requests
           </h2>

@@ -47,14 +47,12 @@ const LoginCard = ({ goToHome, setUserId }) => {
     }
 
     try {
-
       const response = await axios.post(`${process.env.REACT_APP_API_URL}user/register`, {
         username,
         email,
         password,
       });
       
-
       const { userId } = response.data;
       setUserId(userId);
 

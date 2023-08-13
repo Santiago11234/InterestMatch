@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Header from '../Components/Header/Header';
 import SwipButtons from '../Components/SwipeButtons/SwipButtons';
 import TinderCards from '../Components/TinderCards/TinderCards';
@@ -10,6 +10,12 @@ export default function HomePage({ userId, handlelogoutclick }) {
   const [isProfileOpen, setProfileOpen] = useState(false);
   const navigate = useNavigate();
   const [interestIndex, setInterestIndex] = useState(1);
+  const [haveCandidates, setHaveCandidates] = useState(false);
+  let candidates = false;
+
+  useEffect(() => {
+    setHaveCandidates(candidates);
+  }, [candidates]);
 
   const handleProfileButtonClick = () => {
     setProfileOpen((prevState) => !prevState); 
@@ -42,8 +48,8 @@ export default function HomePage({ userId, handlelogoutclick }) {
   return (
     <div style={{'overflow': 'hidden'}} >
       <Header handleProfileButtonClick={handleProfileButtonClick} handleMessagesClick={goToMessages} />
-      <TinderCards tinderCardRef={tinderCardRef}  userId={userId}  index={interestIndex}/>
-      <SwipButtons tinderCardRef={tinderCardRef} setIndex={setInterestIndex}  />
+      <TinderCards tinderCardRef={tinderCardRef}  userId={userId}  index={interestIndex} haveCandidates={candidates}/>
+      <SwipButtons tinderCardRef={tinderCardRef} setIndex={setInterestIndex} haveCandidates={candidates} />
      
       <ProfileSlideIn open={isProfileOpen} handlelogoutclick={goToLogIn} onClose={handleCloseProfile} returnToSettings={goToSettings} returnToProfile={goToProfile} />
     </div>

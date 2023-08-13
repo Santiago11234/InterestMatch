@@ -3,7 +3,7 @@ import styles from "./TinderCards.module.css";
 import TinderCard from "react-tinder-card";
 import axios from "../../Services/axios";
 
-function TinderCards({ tinderCardRef, userId, index }) {
+function TinderCards({ tinderCardRef, userId, index, haveCandidates }) {
   const [candidates, setCandidates] = useState([]);
   const [currentCandidateIndex, setCurrentCandidateIndex] = useState(0);
   const [currentInterestIndex, setCurrentInterestIndex] = useState(0);
@@ -15,6 +15,9 @@ function TinderCards({ tinderCardRef, userId, index }) {
           `${process.env.REACT_APP_API_URL}user/get-candidates/${userId}`
         );
         setCandidates(response.data);
+        if(candidates.length !== 0) {
+          haveCandidates(true);
+        }
       } catch (error) {
         console.error("Error fetching candidates:", error);
       }
@@ -43,6 +46,9 @@ function TinderCards({ tinderCardRef, userId, index }) {
         })
         .then(() => {
           console.log(userId, "deleted candidate", candidateId);
+          if(candidates.length === 0) {
+            haveCandidates(false);
+          }
         })
         .catch((error) => {
           console.error("Error deleting candidate:", error);

@@ -6,12 +6,19 @@ import IconButton from '@mui/material/IconButton';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 
-function SwipButtons({  tinderCardRef, setIndex }) {
+function SwipButtons({  tinderCardRef, setIndex, haveCandidates }) {
+  
   const handleSwipeLeft = () => {
+    if(!haveCandidates) {
+      return;
+    }
     tinderCardRef.current.swipe('left');
   };
 
   const handleSwipeRight = () => {
+    if(!haveCandidates) {
+      return;
+    }
     tinderCardRef.current.swipe('right');
     console.log(tinderCardRef.current);
   };

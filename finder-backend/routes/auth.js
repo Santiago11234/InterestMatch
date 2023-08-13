@@ -14,6 +14,7 @@ router.post("/register", async (req, res) => {
 
     const userId = uuidv4();
 
+    
     const newUser = new User({
       userId,
       username,

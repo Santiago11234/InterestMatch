@@ -7,11 +7,11 @@ export default function Denied() {
     <div>
       <Modal
         open={true}
-        className={styles.modalPage}
+        className={styles.OtherModalPageContainer}
         disableEnforceFocus
         hideBackdrop
       >
-        <div className={styles.otherModalContent}>
+        <div className={styles.modalContent}>
           <h2>You have no denied requests</h2>
         </div>
       </Modal>

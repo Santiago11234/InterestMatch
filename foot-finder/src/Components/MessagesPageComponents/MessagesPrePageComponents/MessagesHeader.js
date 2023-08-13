@@ -13,7 +13,12 @@ import SaveAsIcon from "@mui/icons-material/SaveAs";
 import CloseIcon from "@mui/icons-material/Close";
 import styles from "../MessagesPage.module.css";
 
-export default function MessagesHeader({ clickedBack, changePage, userId, updateSearchText }) {
+export default function MessagesHeader({
+  clickedBack,
+  changePage,
+  userId,
+  updateSearchText,
+}) {
   const [activeSection, setActiveSection] = useState("Messages");
   const [user, setUser] = useState({});
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -32,7 +37,7 @@ export default function MessagesHeader({ clickedBack, changePage, userId, update
   const handleSearchTextChange = (event) => {
     const searchText = event.target.value;
     setPairSearchText(searchText);
-    updateSearchText(searchText); 
+    updateSearchText(searchText);
   };
 
   const handleSectionClick = (section) => {
@@ -105,7 +110,7 @@ export default function MessagesHeader({ clickedBack, changePage, userId, update
         </div>
       </div>
 
-      <Modal open={isModalOpen} className={styles.modalPage} disableEnforceFocus hideBackdrop>
+      <Modal open={isModalOpen} className={styles.modalPageContainer} disableEnforceFocus hideBackdrop>
         <div className={styles.modalContent}>
           <TextField
             label="Search for a pair"

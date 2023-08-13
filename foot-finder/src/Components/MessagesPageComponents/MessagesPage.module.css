@@ -149,39 +149,26 @@
 
   .modalContent {
     position: absolute;
-    width: 100%;
-    transform: translate(-105%, -35%);
     background-color: white;
+    width: 90%;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 6px 9px rgba(0, 0, 0, 0.4);
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
+    align-items: center; 
+    z-index: 999;
   }
 
-  .otherModalContent {
-    position: absolute;
+  .modalPageContainer {
+    transform: translate(10px, 60px);
     width: 100%;
-    transform: translate(-105%, 40%);
-    background-color: white;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 6px 9px rgba(0, 0, 0, 0.4);
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-  }
-  
-  .modalPage {
-    width: 85%;
-    height: 10%;
-    top: 10%;
-    left: 100%;
   }
 
-  
-
+  .OtherModalPageContainer {
+    transform: translate(10px, 120px);
+    width: 100%;
+  }
 
   .requests {
     position: absolute;

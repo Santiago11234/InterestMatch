@@ -37,12 +37,11 @@ export default function MessagesPairListItem({ userId, pair }) {
           className={styles.acceptInterestButton}
           onClick={() => handleInterest(true)} 
         >
-          Accept
+          View Profile
         </button>
       </div>
     </div>
     : null}
-  
   </div>
   );
 }
