@@ -1,6 +1,5 @@
 import React from 'react';
 import ProfilePageCard from '../ProfilePageCard'; 
-import Burger from '../../../Assets/Images/burger.jpeg';
 
 const Vaca = ({userId}) => {
   return ( 
