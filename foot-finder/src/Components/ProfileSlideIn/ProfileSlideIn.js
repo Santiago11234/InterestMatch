@@ -8,7 +8,6 @@ import IconButton from '@mui/material/IconButton';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { useSwipeable } from 'react-swipeable';
 import styles from './ProfileSlideIn.module.css';
-
 const ProfileSlideIn = ({ open, onClose, handlelogoutclick, returnToSettings, returnToProfile }) => {
   const [backButtonClicked, setBackButtonClicked] = useState(false);
 
