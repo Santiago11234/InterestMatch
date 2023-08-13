@@ -27,8 +27,8 @@ app.use(cors(
     credentials: true
     }
 ));
-
-// DB Config
+//changed origin
+// DB Config 
 mongoose.connect(connection_url, {
 
 });
