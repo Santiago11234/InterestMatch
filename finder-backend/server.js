@@ -20,7 +20,13 @@ const connection_url = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.D
 // Middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cors());
+app.use(cors(
+    {
+    origin: ['http://interest-match-app.vercel.app'],
+    methods: ['GET', 'POST', 'DELETE'],
+    credentials: true
+    }
+));
 
 // DB Config
 mongoose.connect(connection_url, {
