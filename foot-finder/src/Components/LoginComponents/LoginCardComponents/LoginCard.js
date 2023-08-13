@@ -5,13 +5,7 @@ import FormHeaderComponent from "./Components/FormHeaderComponent";
 import FormInput from "./Components/FormInput";
 import FormOtherMethods from "./Components/FormOtherMethods";
 import axios from "axios";
-import {
-  FormControl,
-  InputLabel,
-  OutlinedInput,
-  InputAdornment,
-  IconButton,
-} from "@mui/material";
+import { InputAdornment, IconButton,} from "@mui/material";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 
 const LoginCard = ({ goToHome, setUserId }) => {
@@ -25,7 +19,7 @@ const LoginCard = ({ goToHome, setUserId }) => {
   const handleLogin = async () => {
     try {
       console.log(process.env.REACT_APP_API_URL)
-      const response = await axios.post(`${process.env.REACT_APP_API_URL}/user/login`, {
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}user/login`, {
         username,
         password,
       });
@@ -54,7 +48,7 @@ const LoginCard = ({ goToHome, setUserId }) => {
 
     try {
 
-      const response = await axios.post(`${process.env.REACT_APP_API_URL}/user/register`, {
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}user/register`, {
         username,
         email,
         password,

@@ -1,6 +1,5 @@
 import React from "react";
 import Logo from "../../../../Assets/Images/Logos/FoodFinderLogo.png";
-import IconButton from "@mui/material/IconButton";
 import styles from '../LoginCard.module.css';
 
 export default function FormheaderComponent({ title }) {
