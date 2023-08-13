@@ -24,7 +24,7 @@ const LoginCard = ({ goToHome, setUserId }) => {
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post("http://localhost:8001/user/login", {
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/user/login`, {
         username,
         password,
       });
@@ -52,11 +52,13 @@ const LoginCard = ({ goToHome, setUserId }) => {
     }
 
     try {
-      const response = await axios.post("http://localhost:8001/user/register", {
+
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/user/register`, {
         username,
         email,
         password,
       });
+      
 
       const { userId } = response.data;
       setUserId(userId);

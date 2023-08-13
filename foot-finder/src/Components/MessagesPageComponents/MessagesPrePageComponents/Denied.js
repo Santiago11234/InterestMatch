@@ -5,7 +5,7 @@ import {  Modal } from "@mui/material";
 export default function Denied() {
   return (
     <div>
-<Modal open={true} className={styles.modalPage2} disableEnforceFocus hideBackdrop>
+<Modal open={true} className={styles.otherModalPage} disableEnforceFocus hideBackdrop>
         <div className={styles.modalContent}>
           <h2>
             You have no denied requests

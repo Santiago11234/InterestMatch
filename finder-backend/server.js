@@ -6,12 +6,12 @@ import cardsRouter from './routes/cards.js';
 import userRouter from './routes/auth.js';
 
 
-//admin Password: WG75lNqOWXzWKsFb
 // App config
 dotenv.config();
 const app = express();
 const port = process.env.PORT || 8001;
-const connection_url = 'mongodb+srv://admin:WG75lNqOWXzWKsFb@food-finder-cluster.lhgaff1.mongodb.net/?retryWrites=true&w=majority';
+const connection_url = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}/${process.env.DB_PARAMS}`;
+
 
 
 // Connect to your MongoDB database using mongoose

@@ -12,7 +12,7 @@ export default function MessagesList({ userId }) {
       try {
         console.log(userId)
         const response = await axios.get(
-          `http://localhost:8001/user/get-requests/${userId}`
+          `${process.env.REACT_APP_API_URL}/user/get-requests/${userId}`
         );
         setPairs(response.data);
       } catch (error) {
@@ -31,7 +31,7 @@ export default function MessagesList({ userId }) {
           <RequestPairListItem key={index} pair={pair}  userId={userId}/>
         ))
       ) : (
-        <Modal open={true} className={styles.modalPage2} disableEnforceFocus hideBackdrop>
+        <Modal open={true} className={styles.otherModalPage} disableEnforceFocus hideBackdrop>
         <div className={styles.modalContent}>
           <h2>
             You have no requests

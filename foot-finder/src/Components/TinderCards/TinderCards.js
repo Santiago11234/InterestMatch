@@ -12,7 +12,7 @@ function TinderCards({ tinderCardRef, userId, index }) {
     async function fetchCandidates() {
       try {
         const response = await axios.get(
-          `http://localhost:8001/user/get-candidates/${userId}`
+          `${process.env.REACT_APP_API_URL}/user/get-candidates/${userId}`
         );
         setCandidates(response.data);
       } catch (error) {
