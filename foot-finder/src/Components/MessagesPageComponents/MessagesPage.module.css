@@ -1,0 +1,188 @@
+.messagesPairListItem {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .messagesPairListItem img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    margin-right: 16px;
+  }
+  
+.pairDetails {
+  display: flex;
+  flex-grow: 1;
+}
+
+  
+  .pairDetails h3 {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  
+  .pairDetails p {
+    margin: 0;
+    color: #777;
+  }
+  
+
+  .headerText {
+    flex: 1;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .noTextHighlight::selection {
+    background-color: transparent;
+    color: inherit;
+  }
+  
+  
+  .secondaryHeader {
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: #a9a8a8 solid 1px;
+    position: relative; 
+    /* background-color: #e6b6b6; */
+  }
+  
+  .sectionText {
+    font-size: 1.25rem;
+    margin: 0 15px;
+    cursor: pointer;
+    
+  }
+  
+  .activeLeftSection::before {
+    content: "";
+    position: absolute;
+    bottom: -1px; 
+    height: 3px; 
+    left: 0;
+    width: 33%;
+    background-color: #474747; 
+  }
+
+  .activeMidSection::before {
+    content: "";
+    position: absolute;
+    bottom: -1px; 
+    width: 33%;
+    left: 33%;
+    height: 3px; 
+    background-color: #474747; 
+    transition: background-color 0.3s; 
+  }
+
+  .activeRightSection::before {
+    content: "";
+    position: absolute;
+    bottom: -1px; 
+    width: 33%;
+    right: 0;
+    height: 3px; 
+    background-color: #474747; 
+    transition: background-color 0.3s; 
+  }
+
+
+  .acceptInterestButton {
+    background-color: #e53935; 
+    color: white;
+    border: none;
+    padding: 3px 16px;
+    font-size: 0.99rem;
+    text-transform: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-left: 20px;
+  }
+  
+  
+  .messagesPageContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .conversationContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    padding-top: 20px;
+    overflow-y: scroll;
+  }
+  
+  .message {
+    padding: 10px;
+    border-radius: 8px;
+    word-wrap: break-word;
+    max-width: 70%;
+  }
+  
+  .recievedMessage {
+    background-color: #f0f0f0;
+    align-self: flex-start;
+  }
+  
+  .sentMessage {
+    background-color: #bdecf9;
+    align-self: flex-end;
+  }
+  
+  .sendMessageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .modalContent {
+    position: absolute;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 6px 9px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .modalPage {
+    width: 85%;
+    height: 10%;
+    top: 10%;
+    left: 8%;
+  }
+
+  .modalPage2 {
+    width: 85%;
+    height: 10%;
+    top: 20%;
+    left: 8%;
+  }
+  
+
+  .requests {
+    position: absolute;
+    display: flex;
+    top:  50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+  }
+
+  

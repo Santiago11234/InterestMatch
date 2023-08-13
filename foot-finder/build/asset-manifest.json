@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/InterestMatch/static/css/main.aedc6227.css",
+    "main.js": "/InterestMatch/static/js/main.a5bba43b.js",
+    "static/media/burger.jpeg": "/InterestMatch/static/media/burger.d4822ef8e2db750dee29.jpeg",
+    "static/media/FoodFinderLogo.png": "/InterestMatch/static/media/FoodFinderLogo.81d65d0b3e8f0548d1b5.png",
+    "index.html": "/InterestMatch/index.html",
+    "main.aedc6227.css.map": "/InterestMatch/static/css/main.aedc6227.css.map",
+    "main.a5bba43b.js.map": "/InterestMatch/static/js/main.a5bba43b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.aedc6227.css",
+    "static/js/main.a5bba43b.js"
+  ]
+}

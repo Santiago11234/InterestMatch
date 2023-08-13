@@ -1,0 +1,73 @@
+.profilePage {
+  display: flex;
+}
+
+.sidebarContainer {
+  flex: 0 0 250px; /* Set the width of the sidebar */
+  background-color: white;
+  box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+.contentContainer {
+  flex: 1;
+  padding: 20px;
+}
+
+
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.sidebar {
+  background-color: white;
+  box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.1);
+  width: 250px; /* You can adjust the width as needed */
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.content {
+  flex: 1; /* Set flex to 1 to fill up the remaining space */
+  padding: 20px;
+}
+
+
+.sidebarHeader {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sidebarMenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebarMenu li {
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.sidebarMenu li.active {
+  background-color: #7289da;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.content {
+  flex: 3;
+  padding: 20px;
+}
+
+.contentHeader {
+  margin-bottom: 20px;
+}
+
+.accountSection {
+  /* Add account section styles */
+}

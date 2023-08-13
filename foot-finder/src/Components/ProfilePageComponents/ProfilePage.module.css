@@ -1,0 +1,175 @@
+.buttonRowContainer {
+    display: flex;
+    justify-content: center;
+    padding: 0 20px; 
+    overflow: hidden;
+  }
+  
+  .buttonRow {
+    display: flex;
+    margin-top: 20px;
+    overflow: auto;
+    
+  }
+  
+  .buttonRow::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
+  
+  .button {
+    background: none;
+    border-image-slice: 1;
+    padding: 5px 10px;
+    font-size: 16px;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+
+.cardContainer {
+    border-radius: 16px;
+    margin: 70px 30px; 
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .cardHeader {
+    color: white; 
+  }
+  
+  .cardContent {
+    display: flex;
+  }
+  
+  .cardDescription {
+    flex: 1;
+    padding-right: 10px; 
+  }
+  
+  .cardImage {
+    position: relative;
+    flex: 1;
+  }
+  
+  .editImageOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0.8;
+    text-align: center;
+  }
+  
+
+  .tinderCards__card {
+    position: relative;
+    background-color: white;
+    width: 380px;
+    padding: 20px;
+    max-width: 85vw;
+    height: 30vh;
+    border: 20px;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  
+  .tinderCards__cardContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .tinderCards__swipe {
+    position: absolute;
+  }
+  
+  .tinderCards__top__shadow {
+    top: 0;
+    height: 50px;
+    width: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    color: white;
+    text-align: center;
+  }
+  
+  .tinderCards__left__shadow {
+    height: 83%;
+    width: 50%;
+    top: 50px;
+    text-align: center;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0;
+    padding: 0;
+    border-bottom-left-radius: 20px;
+    color: white;
+  }
+  
+  .tinderCards__description {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+
+
+
+.profileCardContainer {
+  border-radius: 10px;
+  margin: 70px 30px; 
+  display: flex;
+  flex-direction: column;
+  height: 240px;
+  text-align: center;
+}
+
+.profileCardImageContainer {
+  text-align: center;
+  position: relative;
+}
+
+.profileCardImage {
+  position: absolute;
+  top: -50px; 
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 100%;
+  cursor: pointer;
+  border-color: black;
+  border-width: 6px;
+}
+
+.profileeEitModeImage {
+  cursor: pointer;
+}
+
+.profileCardContent {
+  margin-top: 80px;
+}
