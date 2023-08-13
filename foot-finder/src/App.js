@@ -8,6 +8,7 @@ import ProfilePage from './Pages/ProfilePage';
 import MessagesPage from './Pages/MessagesPage';
 import IndividMessages from './Components/MessagesPageComponents/IndividMessages';
 
+//I need this comment to deploy
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userId, setUserId] = useState('');

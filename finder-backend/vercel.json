@@ -7,3 +7,5 @@
       { "src": "/.*", "dest": "server.js" }
     ]
   }
+
+  
