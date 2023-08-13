@@ -3,12 +3,12 @@
   "name": "Interest Match",
   "icons": [
     {
-      "src": "../src/Assets/Images/Logos/FoodFinderLogo.png",
+      "src": "../build/static/media/FoodFinderLogo.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "../src/Assets/Images/Logos/FoodFinderLogo.png",
+      "src": "../build/static/media/FoodFinderLogo.png",
       "sizes": "512x512",
       "type": "image/png"
     }
