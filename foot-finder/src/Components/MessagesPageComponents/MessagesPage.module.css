@@ -149,9 +149,21 @@
 
   .modalContent {
     position: absolute;
-    left: 50%;
     width: 100%;
-    transform: translate(-50%, -50%);
+    transform: translate(-105%, -35%);
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 6px 9px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .otherModalContent {
+    position: absolute;
+    width: 100%;
+    transform: translate(-105%, 40%);
     background-color: white;
     padding: 10px;
     border-radius: 5px;
@@ -165,16 +177,11 @@
     width: 85%;
     height: 10%;
     top: 10%;
-    left: 8%;
+    left: 100%;
   }
 
-  .otherModalPage {
-    width: 85%;
-    height: 10%;
-    top: 20%;
-    left: 8%;
-  }
   
+
 
   .requests {
     position: absolute;
