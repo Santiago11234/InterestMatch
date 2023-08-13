@@ -22,7 +22,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cors(
     {
-    origin: ['interest-match.vercel.app'],
+    origin: ['https://interest-match-front-end.vercel.app/'],
     methods: ['GET', 'POST', 'DELETE'],
     credentials: true
     }
