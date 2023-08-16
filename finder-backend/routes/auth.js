@@ -248,7 +248,7 @@ router.get("/get-profile-picture-and-name/:userId", async (req, res) => {
   }
 });
 
-// adds multiple requests?!?!?
+// works
 router.delete("/delete-candidate/:userId", async (req, res) => {
   try {
     const { userId } = req.params;
@@ -264,7 +264,7 @@ router.delete("/delete-candidate/:userId", async (req, res) => {
     candidateUser.candidates.pull(user._id);
     await candidateUser.save();
 
-    if (isPair && !user.pairs.includes(candidateUser._id)) {
+    if (isPair && !user.requests.includes(candidateUser._id) ) {
       user.requests.push(candidateUser._id);
     }
 
@@ -447,16 +447,16 @@ router.post("/send-message/:userId/:pairId", async (req, res) => {
         pair: [senderUser, receiverUser],
         messages: [],
       });
-    
+
       await conversation.save();
     }
-    
+
     conversation.messages.push({
       sender: senderUser,
       content: content,
       timestamp: Date.now(),
     });
-    
+
     await conversation.save();
 
     if (!conversation) {
@@ -469,6 +469,19 @@ router.post("/send-message/:userId/:pairId", async (req, res) => {
 
     senderUser.save();
     receiverUser.save();
+
+    // failed push user to top code
+    // const user = await User.findOne({ userId });
+    // const pairsList = user.pairs;
+
+
+    // const pairIndex = pairsList.findIndex((pair) => pair.equals(receiverUser._id));
+    // if (pairIndex > 0) {
+    //   pairsList.splice(pairIndex, 1);
+    //   pairsList.unshift(receiverUser._id);
+    //   user.pairs = pairsList;
+    //   await user.save();
+    // }
 
     res.status(200).json({
       message: "Message sent successfully",

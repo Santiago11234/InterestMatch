@@ -2,7 +2,7 @@ import React from 'react';
 import styles from '../MessagesPage.module.css';
 import { useNavigate } from 'react-router-dom';
 
-export default function MessagesPairListItem({ pair }) {
+export default function MessagesPairListItem({ pair, conversation }) {
   const navigate = useNavigate();
 
   function goToDMs() {

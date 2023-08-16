@@ -7,6 +7,7 @@ function TinderCards({ tinderCardRef, userId, index, haveCandidates }) {
   const [candidates, setCandidates] = useState([]);
   const [currentCandidateIndex, setCurrentCandidateIndex] = useState(0);
   const [currentInterestIndex, setCurrentInterestIndex] = useState(0);
+  const requestsAdded = new Set();
 
   useEffect(() => {
     async function fetchCandidates() {
@@ -38,6 +39,8 @@ function TinderCards({ tinderCardRef, userId, index, haveCandidates }) {
     }
 
       const candidateId = candidates[currentCandidateIndex].userId;
+
+      if (!requestsAdded.has(candidateId)) {
       axios.delete(`${process.env.REACT_APP_API_URL}user/delete-candidate/${candidateId}`, {
           data: {
             isPair: isPair,
@@ -46,6 +49,7 @@ function TinderCards({ tinderCardRef, userId, index, haveCandidates }) {
         })
         .then(() => {
           console.log(userId, "deleted candidate", candidateId);
+          requestsAdded.add(candidateId); 
           if(candidates.length === 0) {
             haveCandidates(false);
           }
@@ -53,6 +57,7 @@ function TinderCards({ tinderCardRef, userId, index, haveCandidates }) {
         .catch((error) => {
           console.error("Error deleting candidate:", error);
         });
+      }
     
 
     setCurrentCandidateIndex(

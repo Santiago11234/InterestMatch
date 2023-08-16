@@ -37,10 +37,10 @@ function SwipButtons({  tinderCardRef, setIndex, haveCandidates }) {
         <CloseIcon fontSize="large" />
       </IconButton>
       <IconButton className={styles.swipeButtons__button + " " + styles.swipeButtons__before} onClick={beforeInterest}>
-        <NavigateBeforeIcon fontSize="inherit" style={{ fontSize: 50 }} />
+        <NavigateBeforeIcon fontSize="inheret" style={{fontSize: 50}} />
       </IconButton>
       <IconButton className={styles.swipeButtons__button + " " + styles.swipeButtons__next} onClick={nextInterest}>
-        <NavigateNextIcon fontSize="inherit" style={{ fontSize: 50 }} />
+        <NavigateNextIcon fontSize="inheret" style={{fontSize: 50}}/>
       </IconButton>
       <IconButton className={styles.swipeButtons__button + " " + styles.swipeButtons__right} onClick={handleSwipeRight}>
         <FavoriteIcon fontSize="large" />

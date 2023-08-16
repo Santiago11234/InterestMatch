@@ -15,6 +15,7 @@ export default function MessagesList({ userId, pairSearchText }) {
           `${process.env.REACT_APP_API_URL}user/get-pairs/${userId}`
         );
         setPairs(response.data);
+        
         setFilteredPairs(response.data);
         setPairsFetched(true); 
       } catch (error) {
