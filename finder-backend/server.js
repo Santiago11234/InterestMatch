@@ -17,7 +17,7 @@ const connection_url = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.D
 // Connect to your MongoDB database using mongoose
 
 
-// Middlewares
+// Middlewares s
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cors({
