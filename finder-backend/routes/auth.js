@@ -524,4 +524,3 @@ router.get("/get-messages/:userId/:pairId", async (req, res) => {
 });
 
 export default router;
-
